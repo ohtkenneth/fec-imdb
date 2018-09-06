@@ -1,0 +1,15 @@
+.plot-container {
+  display: flex;
+  align-items: center;
+}
+
+.keyword-container {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 0px 15px;
+}
+
+.keyword-heading {
+  margin: 3px 0px 0px 0px;
+}
+
