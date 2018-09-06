@@ -34,7 +34,7 @@ const mockStoryline = {
   genres: ['Horror', 'Mystery', 'Thriller'],
 }
 const mockDetails = {
-  officialSites: 'Official Site',
+  officialSites: ['Official Facebook', 'Official Instagram'],
   country: 'USA',
   language: 'English',
   releaseDate: '7 September 2018 (USA)',

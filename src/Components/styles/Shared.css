@@ -1,9 +1,9 @@
-.details-section {
+.details-container {
   display: flex;
   align-items: center;
 }
 
-.keyword-section {
+.keyword-container {
   display: flex;
   align-items: center;
   margin: 0px 0px 0px 15px;
@@ -12,11 +12,3 @@
 .keyword-heading {
   margin: 7px 0px 0px 0px;
 }
-
-.tagline {
-  margin: 5px 0px 0px 15px;
-  font-family: Verdana, Arial, sans-serif;
-  color: #333;
-  font-size: 13px;
-}
-

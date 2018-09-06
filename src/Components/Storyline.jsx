@@ -12,9 +12,9 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
       <p>
         { storyline }
       </p>
-      <div className={ styles['details-container']}>
+      <div className={ styles['details-section']}>
         <h4 className={ styles['keyword-heading'] }>Plot Keywords: </h4>
-        <div className={ styles['keyword-container'] }>
+        <div className={ styles['keyword-section'] }>
           {
             plotKeyWords.map((keyword, index, array) => (
               // pass in length and index to check if last keyword to avoid adding trailing grey divider
@@ -23,13 +23,13 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
           }
         </div>
       </div>
-      <div className={ styles['details-container']}>
+      <div className={ styles['details-section']}>
         <h4 className={ styles['keyword-heading'] }>Taglines:</h4>
         <span className={ styles.tagline }> { taglines }</span>
       </div>
-      <div className={ styles['details-container']}>
+      <div className={ styles['details-section']}>
         <h4 className={ styles['keyword-heading'] }>Genres:</h4>
-        <div className={ styles['keyword-container'] }>
+        <div className={ styles['keyword-section'] }>
           {
             genres.map((genre, index, array) => (
               <KeyWord keyword={ genre } index={ index } length={ array.length - 1 }/>

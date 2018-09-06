@@ -1,0 +1,10 @@
+.details-section {
+  composes: details-section from './Storyline.css';
+}
+.keyword-section {
+  composes: keyword-section from './Storyline.css';
+}
+
+.keyword-heading {
+  composes: keyword-heading from './Storyline.css';
+}

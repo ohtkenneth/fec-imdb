@@ -1,15 +1,22 @@
 import React from 'react';
-
+import KeyWord from './KeyWord.jsx';
 import styles from './styles/Details.css';
 
-const Details = (props) => {
+const Details = ({ details }) => {
   return (
     <div>
       <div>
         <h3>Details</h3>
       </div>
-      <div>
-        <h4>Official Sites:</h4>
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Official Sites:</h4>
+        <div className={ styles['keyword-section'] }>
+          {
+            details.officialSites.map((site, index, array) => (
+              <KeyWord keyword={ site } index={ index } length={ array.length - 1 }/>
+            ))
+          }
+        </div>
       </div>
       <div>
         <h4>Country:</h4>
