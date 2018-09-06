@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  flex-grow: 2;
+}
+
+.character {
+  flex-grow: 1;
+}
+
+h4, .name, .character {
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  font-size: 13px;
+  font-weight: normal;
+}

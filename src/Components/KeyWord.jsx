@@ -4,7 +4,7 @@ import styles from './styles/KeyWord.css';
 const KeyWord = ({ keyword, index, length }) => {
   if (index === length) {
     return (
-      <h4>{ keyword }</h4>
+      <h4 className={ styles.last }>{ keyword }</h4>
     )
   } else {
     return (

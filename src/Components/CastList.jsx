@@ -13,7 +13,7 @@ const CastList = ({ cast }) => {
           ))
         }
       </div>  
-      See full cast...
+      <h4>See full cast...</h4>
     </div>
   );
 };

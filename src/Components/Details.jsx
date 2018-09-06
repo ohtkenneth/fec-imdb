@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './styles/Details.css';
+
 const Details = (props) => {
   return (
     <div>
