@@ -1,4 +1,24 @@
 .container {
+  /* display: flex;
+  flex-direction: column;
+  padding: 20px; */
+  composes: section-container from './App.css';
+}
+
+.cast-list-container {
   display: flex;
   flex-direction: column;
+  /* padding: 10px 0px 0px 0px; */
+}
+
+.cast-list-container div:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.heading {
+  composes: heading from './App.css';
+}
+
+.footer-link {
+  composes: footer-link from './App.css';
 }

@@ -1,16 +1,6 @@
-.details-section {
-  display: flex;
-  align-items: center;
-}
-
-.keyword-section {
-  display: flex;
-  align-items: center;
-  margin: 0px 0px 0px 15px;
-}
-
-.keyword-heading {
-  margin: 7px 0px 0px 0px;
+.container {
+  border: 1px solid grey;
+  padding: 20px;
 }
 
 .tagline {
@@ -20,3 +10,16 @@
   font-size: 13px;
 }
 
+.heading {
+  composes: heading from './App.css';
+}
+
+.details-section {
+  composes: details-section from './App.css'; 
+}
+.keyword-section {
+  composes: keyword-section from './App.css';
+}
+.keyword-heading {
+  composes: keyword-heading from './App.css';
+}

@@ -5,10 +5,9 @@ import styles from './styles/Storyline.css';
 
 // storyline, plotkeywords, taglines, genres, motion picture rating, parents guide
 const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
-  console.log(storyline.taglines);
   return (
-    <div>
-      <h1>Storyline</h1>
+    <div className={ styles.container }>
+      <h1 className={ styles.heading }>Storyline</h1>
       <p>
         { storyline }
       </p>
@@ -18,7 +17,7 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
           {
             plotKeyWords.map((keyword, index, array) => (
               // pass in length and index to check if last keyword to avoid adding trailing grey divider
-              <KeyWord keyword={ keyword } index={ index } length={ array.length - 1 } />
+              <KeyWord key={ index } keyword={ keyword } index={ index } length={ array.length - 1 } />
             ))
           }
         </div>
@@ -32,7 +31,7 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
         <div className={ styles['keyword-section'] }>
           {
             genres.map((genre, index, array) => (
-              <KeyWord keyword={ genre } index={ index } length={ array.length - 1 }/>
+              <KeyWord key={ index } keyword={ genre } index={ index } length={ array.length - 1 }/>
             ))
           }
         </div>

@@ -24,7 +24,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // use: [ 'style-loader', 'css-loader' ]
         loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]"),
       }
     ],

@@ -1,3 +1,9 @@
+.container {
+  /* border: 1px solid grey;
+  padding: 20px; */
+  composes: section-container from './App.css';
+}
+
 .details-section {
   composes: details-section from './Storyline.css';
 }
@@ -7,4 +13,8 @@
 
 .keyword-heading {
   composes: keyword-heading from './Storyline.css';
+}
+
+.heading { 
+  composes: heading from './App.css';
 }

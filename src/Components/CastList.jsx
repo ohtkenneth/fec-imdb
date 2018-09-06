@@ -5,15 +5,17 @@ import styles from './styles/CastList.css';
 
 const CastList = ({ cast }) => {
   return (
-    <div>
-      <div className={ styles.container }>
+    <div className={ styles.container }>
+      <h3 className={ styles.heading }>Cast</h3>
+      <p>Cast overview, first billed only:</p>
+      <div className={ styles['cast-list-container'] }>
         {
           cast.map((castMember, index) => (
-            <CastListItem key={index} name={ castMember.name } character={ castMember.character } />
+            <CastListItem key={index} url={ castMember.url } name={ castMember.name } character={ castMember.character } />
           ))
         }
-      </div>  
-      <h4>See full cast...</h4>
+      </div>
+      <h4 className={ styles['footer-link'] }>See full cast...</h4>
     </div>
   );
 };

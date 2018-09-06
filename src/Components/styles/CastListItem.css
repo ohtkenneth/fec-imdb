@@ -1,6 +1,8 @@
 .container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin: 2px 0px 2px 0px;
 }
 
 .name {
@@ -11,9 +13,20 @@
   flex-grow: 1;
 }
 
+.elipse {
+  margin: 0px 20px 0px 10px;
+}
+
 h4, .name, .character {
   font-family: Verdana, Arial, sans-serif;
   color: #333;
   font-size: 13px;
   font-weight: normal;
+  margin: 5px 0px 5px 0px;
+}
+
+.actor-img {
+  height: 44px;
+  width: 32px;
+  margin: 0px 10px 0px 0px;
 }

@@ -4,37 +4,52 @@ import styles from './styles/Details.css';
 
 const Details = ({ details }) => {
   return (
-    <div>
+    <div className={ styles.container }>
       <div>
-        <h3>Details</h3>
+        <h3 className={ styles.heading }>Details</h3>
       </div>
       <div className={ styles['details-section'] }>
         <h4 className={ styles['keyword-heading'] }>Official Sites:</h4>
         <div className={ styles['keyword-section'] }>
           {
             details.officialSites.map((site, index, array) => (
-              <KeyWord keyword={ site } index={ index } length={ array.length - 1 }/>
+              <KeyWord key={ index } keyword={ site } index={ index } length={ array.length - 1 } />
             ))
           }
         </div>
       </div>
-      <div>
-        <h4>Country:</h4>
+ 
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Country: { details.country }</h4>
       </div>
-      <div>
-        <h4>Language:</h4>
+
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Language:</h4>
+        <div className={ styles['keyword-section'] }>
+          {
+            details.languages.map((language, index, array) => (
+              <KeyWord key={ index } keyword={ language } index={ index } length={ array.length - 1 }/>
+            ))
+          }
+        </div>
       </div>
-      <div>
-        <h4>Release Date:</h4>
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Release Date: { details.releaseDate } </h4>
       </div>
-      <div>
-        <h4>Also Known As:</h4>
+
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Also Known As: { details.aKa }</h4>
       </div>
-      <div>
-        <h4>Filming Locations:</h4>
-      </div>
-      <div>
-        <h3>Company Credits</h3>
+
+      <div className={ styles['details-section'] }>
+        <h4 className={ styles['keyword-heading'] }>Filming Locations:</h4>
+        <div className={ styles['keyword-section'] }>
+          {
+            details.filmingLocations.map((location, index, array) => (
+              <KeyWord key={ index } keyword={ location } index={ index } length={ array.length - 1} />
+            ))
+          }
+        </div>
       </div>
     </div>
   );
