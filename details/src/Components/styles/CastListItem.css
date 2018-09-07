@@ -23,6 +23,11 @@ h4, .name, .character {
   font-size: 13px;
   font-weight: normal;
   margin: 5px 0px 5px 0px;
+  
+}
+
+.name, .character {
+  width: 400px;
 }
 
 .actor-img {

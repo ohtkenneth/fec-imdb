@@ -4,7 +4,6 @@ import CastListItem from './CastListItem.jsx';
 import styles from './styles/CastList.css';
 
 const CastList = ({ cast }) => {
-  console.log(cast);
   return (
     <div className={ styles.container }>
       <h3 className={ styles.heading }>Cast</h3>

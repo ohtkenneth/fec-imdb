@@ -1,6 +1,7 @@
 .container {
-  border: 1px solid grey;
-  padding: 20px;
+  /* border: 1px solid grey; */
+  /* padding: 20px; */
+  composes: section-container from './App.css';
 }
 
 .tagline {

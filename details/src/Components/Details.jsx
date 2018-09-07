@@ -2,7 +2,7 @@ import React from 'react';
 import KeyWord from './KeyWord.jsx';
 import styles from './styles/Details.css';
 
-const Details = ({ details }) => {
+const Details = ({ details, officialSites, languages, filmingLocations, releaseDate }) => {
   return (
     <div className={ styles.container }>
       <div>
@@ -12,7 +12,7 @@ const Details = ({ details }) => {
         <h4 className={ styles['keyword-heading'] }>Official Sites:</h4>
         <div className={ styles['keyword-section'] }>
           {
-            details.officialSites.map((site, index, array) => (
+            officialSites.map((site, index, array) => (
               <KeyWord key={ index } keyword={ site } index={ index } length={ array.length - 1 } />
             ))
           }
@@ -27,14 +27,14 @@ const Details = ({ details }) => {
         <h4 className={ styles['keyword-heading'] }>Language:</h4>
         <div className={ styles['keyword-section'] }>
           {
-            details.languages.map((language, index, array) => (
+            languages.map((language, index, array) => (
               <KeyWord key={ index } keyword={ language } index={ index } length={ array.length - 1 }/>
             ))
           }
         </div>
       </div>
       <div className={ styles['details-section'] }>
-        <h4 className={ styles['keyword-heading'] }>Release Date: { details.releaseDate } </h4>
+        <h4 className={ styles['keyword-heading'] }>Release Date: { releaseDate } </h4>
       </div>
 
       <div className={ styles['details-section'] }>
@@ -45,7 +45,7 @@ const Details = ({ details }) => {
         <h4 className={ styles['keyword-heading'] }>Filming Locations:</h4>
         <div className={ styles['keyword-section'] }>
           {
-            details.filmingLocations.map((location, index, array) => (
+            filmingLocations.map((location, index, array) => (
               <KeyWord key={ index } keyword={ location } index={ index } length={ array.length - 1} />
             ))
           }

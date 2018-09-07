@@ -7,17 +7,37 @@ const MovieSchema = new Schema({
   title: String,
   cast: Array,
   photos: Array,
+  // STORY LINE
   storyline: String,
   plotKeyWords: Array,
-  tagLines: String,
+  taglines: String,
   genres: Array,
   movieRating: String,
+  // DETAILS
   officialSites: Array,
   country: String,
   languages: Array,
   releaseDate: String,
   aKa: String,
   filmingLocations: Array,
+  // BOX OFFICE
+  budget: String,
+  openingWeekend: String,
+  gross: String,
+  cumulative: String,
+  // CREDITS
+  productionCo: Array,
+  runtime: String,
+  soundMix: String,
+  color: String,
+  aspectRatio: String,
+  // DID YOU KNOW
+  trivia: String,
+  goofs: String,
+  quotes: String,
+  crazyCredits: String, 
+  connections: String,
+  soundtracks: Array,
 });
 
 const Movie = db.model('Movie', MovieSchema);

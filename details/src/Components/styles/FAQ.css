@@ -7,6 +7,7 @@
 .details-section {
   composes: details-section from './App.css';
 }
+
 .keyword-section {
   composes: keyword-section from './App.css';
 }
@@ -17,4 +18,8 @@
 
 .heading { 
   composes: heading from './App.css';
+}
+
+.footer-link {
+  composes: footer-link from './App.css';
 }

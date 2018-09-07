@@ -5,6 +5,7 @@ import styles from './styles/Storyline.css';
 
 // storyline, plotkeywords, taglines, genres, motion picture rating, parents guide
 const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
+  console.log(taglines);
   return (
     <div className={ styles.container }>
       <h1 className={ styles.heading }>Storyline</h1>

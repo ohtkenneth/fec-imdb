@@ -3,8 +3,11 @@ import PhotoList from './PhotoList.jsx';
 import CastList from './CastList.jsx';
 import Storyline from './Storyline.jsx';
 import Details from './Details.jsx';
-import styles from './styles/App.css';
+// import CompanyCredits from './CompanyCredits.jsx';
+import BoxOffice from './BoxOffice.jsx';
+import DidYouKnow from './DidYouKnow.jsx';
 
+import styles from './styles/App.css';
 import axios from 'axios';
 
 const mockCast = [
@@ -84,6 +87,7 @@ export default class App extends React.Component {
       .catch(err => console.log('ERROR from App', err));
   }
   render() {
+    console.log(styles);
     if (this.state.currentMovie) {
       return (
         <div className={ styles.root }>
@@ -91,9 +95,30 @@ export default class App extends React.Component {
             <PhotoList urls={ this.state.currentMovie.photos } />
             <CastList cast={ this.state.currentMovie.cast }/>
             <Storyline storyline={ this.state.currentMovie.storyline } plotKeyWords={ this.state.currentMovie.plotKeyWords }
-              taglines={ mockStoryline.taglines } genres={ mockStoryline.genres }
+              taglines={ this.state.currentMovie.taglines } genres={ this.state.currentMovie.genres }
               />
-            <Details details={ mockDetails } />
+            <Details 
+              details={ mockDetails } 
+              country={ this.state.currentMovie.country }
+              languages={ this.state.currentMovie.languages }
+              releaseDate={ this.state.currentMovie.releaseDate }
+              officialSites={ this.state.currentMovie.officialSites }
+              filmingLocations={ this.state.currentMovie.filmingLocations }
+            />
+            <BoxOffice
+              budget={ this.state.currentMovie.budget }
+              openingWeekend= { this.state.currentMovie.openingWeekend } 
+              gross={ this.state.currentMovie.gross }
+              cumulative= { this.state.currentMovie.cumulative }
+            />
+            <DidYouKnow
+              trivia={ this.state.currentMovie.trivia }
+              goofs={ this.state.currentMovie.goofs }
+              quotes={ this.state.currentMovie.quotes }
+              crazyCredits={ this.state.currentMovie.crazyCredits }
+              connections={ this.state.currentMovie.connections }
+              soundtracks= { this.state.currentMovie.soundtracks }
+            />
           </div>
         </div> 
       );

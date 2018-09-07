@@ -4,13 +4,24 @@ p {
   font-size: 13px;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  color: #666666;
+  font-size: 13px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   width: 650px;
   flex-shrink: 0;
   justify-content: flex-start;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px dashed black;
 }
 
 .root {
@@ -31,7 +42,7 @@ p {
 }
 
 .section-container {
-  border: 1px solid grey;
+  border-bottom: 0.05em solid grey;
   padding: 20px;
 }
 

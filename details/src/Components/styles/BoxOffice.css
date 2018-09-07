@@ -18,3 +18,7 @@
 .heading { 
   composes: heading from './App.css';
 }
+
+.footer-link {
+  composes: footer-link from './App.css';
+}
