@@ -1,10 +1,11 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import PhotoList from './PhotoList.jsx';
 import CastList from './CastList.jsx';
 import Storyline from './Storyline.jsx';
 import Details from './Details.jsx';
 import styles from './styles/App.css';
+
+import axios from 'axios';
 
 const mockCast = [
   {
@@ -58,19 +59,65 @@ const mockPhotoUrls = [
   'https://m.media-amazon.com/images/M/MV5BMTkxODU5NTE4OV5BMl5BanBnXkFtZTcwODkyOTY3Nw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
 ];
 
-const App = () => {
-  return (
-    <div className={ styles.root }>
-      <div className={ styles.container }>
-        <PhotoList urls={ mockPhotoUrls } />
-        <CastList cast={ mockCast }/>
-        <Storyline storyline={ mockStoryline.storyline } plotKeyWords={ mockStoryline.plotKeyWords }
-          taglines={ mockStoryline.taglines } genres={ mockStoryline.genres }
-          />
-        <Details details={ mockDetails } />
-      </div>
-    </div> 
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mainMovie: null,
+    };
+  }
+  componentDidMount() {
+    let rand = Math.floor(Math.random() * 5) + 1;
+    console.log(rand);
+    const options = {
+      url: `/api/movie/${rand}`,
+      method: 'get',
+    };
+    axios(options)
+      .then(results => {
+        console.log(results);
+        this.setState({
+          currentMovie: results.data,
+        });
+      })
+      .catch(err => console.log('ERROR from App', err));
+  }
+  render() {
+    if (this.state.currentMovie) {
+      return (
+        <div className={ styles.root }>
+          <div className={ styles.container }>
+            <PhotoList urls={ this.state.currentMovie.photos } />
+            <CastList cast={ this.state.currentMovie.cast }/>
+            <Storyline storyline={ this.state.currentMovie.storyline } plotKeyWords={ this.state.currentMovie.plotKeyWords }
+              taglines={ mockStoryline.taglines } genres={ mockStoryline.genres }
+              />
+            <Details details={ mockDetails } />
+          </div>
+        </div> 
+      );
+    } else {
+      return (
+        <div>
+          Loading...
+        </div>
+      )
+    }
+  }
 }
 
-export default App;
+// const App = () => {
+//   return (
+//     <div className={ styles.root }>
+//       <div className={ styles.container }>
+//         <PhotoList urls={ mockPhotoUrls } />
+//         <CastList cast={ mockCast }/>
+//         <Storyline storyline={ mockStoryline.storyline } plotKeyWords={ mockStoryline.plotKeyWords }
+//           taglines={ mockStoryline.taglines } genres={ mockStoryline.genres }
+//           />
+//         <Details details={ mockDetails } />
+//       </div>
+//     </div> 
+//   );
+// }

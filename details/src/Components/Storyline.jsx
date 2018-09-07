@@ -15,7 +15,7 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
         <h4 className={ styles['keyword-heading'] }>Plot Keywords: </h4>
         <div className={ styles['keyword-section'] }>
           {
-            plotKeyWords.map((keyword, index, array) => (
+            plotKeyWords.slice(0, 4).map((keyword, index, array) => (
               // pass in length and index to check if last keyword to avoid adding trailing grey divider
               <KeyWord key={ index } keyword={ keyword } index={ index } length={ array.length - 1 } />
             ))
@@ -37,10 +37,13 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
         </div>
       </div>
       <div>
-        <h4>Motion Picture Rating</h4>
+        <h4 className={ styles['keyword-heading'] }>Motion Picture Rating (MPAA)</h4>
+        <p>
+          Movie rating description
+        </p>
       </div>
       <div>
-        <h4>Parents Guide</h4>
+        <h4 className={ styles['keyword-heading'] }>Parents Guide</h4>
       </div>
     </div>
   );
