@@ -1,0 +1,24 @@
+:local(.container) {
+  /* border: 1px solid grey;
+  padding: 20px; */
+  composes: section-container from './App.css';
+}
+
+:local(.details-section) {
+  composes: details-section from './App.css';
+}
+:local(.keyword-section) {
+  composes: keyword-section from './App.css';
+}
+
+:local(.keyword-heading) {
+  composes: keyword-heading from './App.css';
+}
+
+:local(.heading) { 
+  composes: heading from './App.css';
+}
+
+:local(.footer-link) {
+  composes: footer-link from './App.css';
+}

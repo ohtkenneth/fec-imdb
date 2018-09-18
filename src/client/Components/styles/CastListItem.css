@@ -1,0 +1,44 @@
+:local(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2px 0px 2px 0px;
+}
+
+:local(.name) {
+  flex-grow: 2;
+}
+
+:local(.character) {
+  flex-grow: 1;
+}
+
+:local(.elipse) {
+  margin: 0px 20px 0px 10px;
+}
+
+:local(.name), :local(.character) {
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px 0px 5px 0px;  
+}
+
+:local(h4) {
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px 0px 5px 0px;  
+}
+
+:local(.name, .character) {
+  width: 400px;
+}
+
+:local(.actor-img) {
+  height: 44px;
+  width: 32px;
+  margin: 0px 10px 0px 0px;
+}

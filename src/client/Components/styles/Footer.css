@@ -1,0 +1,56 @@
+:local(.container) {
+  display: flex
+}
+
+:local(.details-section) {
+  composes: details-section from './App.css';
+}
+
+:local(.keyword-section) {
+  composes: keyword-section from './App.css';
+}
+
+:local(.keyword-heading) {
+  composes: keyword-heading from './App.css';
+}
+
+:local(.heading) { 
+  composes: heading from './App.css';
+}
+
+:local(.imdb-everywhere-section) {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  padding: 15px;
+  border-right: 0.05em solid grey;
+}
+
+:local(.store-container) {
+  display: flex;
+}
+
+:local(.store-button) {
+  width: 130px;
+  height: 50px;
+}
+
+:local(.follow-container) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 0px 33px;
+}
+
+:local(.social-icons-container) {
+  display: flex;
+  align-items: center;
+}
+
+:local(.social-icon) {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0px 3px 0px 3px;
+}
+

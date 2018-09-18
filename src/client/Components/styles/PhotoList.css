@@ -1,0 +1,24 @@
+:local(.container) {
+  /* border: 1px solid grey; */
+  composes: section-container from './App.css';
+}
+
+:local(.heading) {
+  composes: heading from './App.css';
+}
+
+:local(.photos-container) {
+  display: flex;
+  overflow: hidden;
+}
+
+:local(.photo) {
+  width: 99px;
+  height: 99px;
+  margin: 0px 3px 0px 0px;
+}
+
+:local(.footer-link) {
+  composes: footer-link from './App.css';
+}
+

@@ -1,0 +1,41 @@
+:local(.container) {
+  /* border: 1px solid grey;
+  padding: 20px; */
+  composes: section-container from './App.css';
+}
+
+:local(.details-section) {
+  composes: details-section from './App.css';
+}
+:local(.keyword-section) {
+  composes: keyword-section from './App.css';
+}
+
+:local(.keyword-heading) {
+  composes: keyword-heading from './App.css';
+}
+
+:local(.heading) { 
+  composes: heading from './App.css';
+}
+
+:local(.footer-link) {
+  composes: footer-link from './App.css';
+}
+
+:local(.question-section) {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+:local(.question-mark) {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  padding: 0px 8px 0px 0px; 
+}
+
+:local(.questions-container div:nth-child(odd)) {
+  background-color: #eeeeee;
+}

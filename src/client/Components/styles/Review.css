@@ -1,0 +1,64 @@
+:local(.container) {
+  /* width: 667px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-family: Arial;
+  color: #474747;
+  flex-direction: column;
+  */
+  composes: section-container from './App.css';
+  flex-direction: column;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-family: Arial;
+  color: #474747;
+}
+
+:local(.reviewbody){
+  /* margin: 0px 15px 25px 15px; */
+}
+
+:local(.header) {
+  font-weight: 100;
+}
+
+:local(.date) {
+  font-size: 14px;
+}
+
+:local(.username) {
+  color: #1173aa;
+  font-size: 14px;
+}
+
+:local(.userreviews) {
+  color: #1173aa;
+  font-size: 14px;
+}
+
+:local(.feedback){
+  font-size: 14px;
+}
+
+:local(.btnyes) {
+  background-color: #FFFBA0;
+  font-size: 12px;
+}
+
+:local(.btnno) {
+  background-color: #FFFBA0;
+  font-size: 12px;
+}
+
+:local(.report){
+  color: #1173aa;
+}
+
+:local(.reviewthis){
+  color: #1173aa;
+  font-size: 14px;
+}
+:local(.seeall){
+  color: #1173aa;
+  font-size: 14px;
+}
