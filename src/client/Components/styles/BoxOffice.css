@@ -22,3 +22,7 @@
 :local(.footer-link) {
   composes: footer-link from './App.css';
 }
+
+:local(.normal) {
+  font-weight: normal;
+}

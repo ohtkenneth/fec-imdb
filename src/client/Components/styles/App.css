@@ -1,8 +1,8 @@
-:global(body) {
+:local(body) {
   background-color: #e3e2dd;
 }
 
-:global(p) {
+:local(p) {
   font-family: Verdana, Arial, sans-serif;
   color: #333;
   font-size: 13px;
@@ -14,21 +14,21 @@
   margin-inline-end: 0px;
 }
 
-:global(ul) {
+:local(ul) {
   list-style: none;
   padding-left: 0px;
 }
 
-:global(li) {
+/* :local(li) {
   color: #666666;
   font-size: 13px;
   font-family: Verdana, Arial, sans-serif;
-}
+} */
 
 :local(.container) {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 667px;
   flex-shrink: 0;
   justify-content: flex-start;
   border-bottom: 0.5px dashed black;
@@ -38,7 +38,7 @@
 
 :local(.root) {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 :local(.heading) {

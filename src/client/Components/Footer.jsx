@@ -18,9 +18,9 @@ const Footer = () => {
           Follow FMDb on
         </h3>
         <div className={ styles['social-icons-container'] }>
-          <img className={ styles['social-icon'] } src="/fb.png"/>
-          <img className={ styles['social-icon'] } src="/twit.png"/>
-          <img className={ styles['social-icon'] } src="/insta.png"/>
+          <img className={ styles['social-icon'] } src="https://s3-us-west-1.amazonaws.com/fec-imdb/app/fb.png"/>
+          <img className={ styles['social-icon'] } src="https://s3-us-west-1.amazonaws.com/fec-imdb/app/insta.png"/>
+          <img className={ styles['social-icon'] } src="https://s3-us-west-1.amazonaws.com/fec-imdb/app/twit.png"/>
         </div>
       </div>
     </div>

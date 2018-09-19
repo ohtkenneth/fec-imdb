@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -10,6 +11,7 @@ const models = require('../db/models');
 const app = express();
 const logger = morgan('dev');
 
+app.use(cors());
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -18,6 +20,7 @@ app.use(express.static(path.join(__dirname, '/../../dist')));
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.get('/', (req, res) => {
+  console.log(req.url);
   res.sendFile(path.join(__dirname, '/../client/public/index.html'));
 });
 
@@ -47,10 +50,8 @@ app.post('/api/movie/:movieId', (req, res) => {
 app.get('/api/review/:reviewId', (req, res) => {
   const { reviewId } = req.params;
 
-  console.log(reviewId);
   models.getMovieReview(reviewId)
     .then(result => {
-      console.log(result);
       res.send(JSON.stringify(result));
     })
     .catch(err => {

@@ -5,7 +5,7 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'client', 'index.jsx'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundleMiddle.js',
   },
   module: {
     rules: [
@@ -27,6 +27,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'src', 'dist'),
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('stylesMiddle.css'),
   ]
 };
