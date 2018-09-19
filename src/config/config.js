@@ -16,7 +16,7 @@ const test = {
 		port: parseInt(process.env.TEST_APP_PORT) || 1337,
 	},
 	db: {
-		host: process.env.TEST_DB_HOST || 'localhost',
+		host: process.env.TEST_DB_HOST || 'mongo',
 		port: parseInt(process.env.TEST_DB_PORT) || 27017,
 		name: process.env.TEST_DB_NAME || 'test',
 	},
