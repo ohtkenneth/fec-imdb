@@ -24,9 +24,10 @@ export default class App extends React.Component {
   componentDidMount() {
     let rand = Math.floor(Math.random() * 5) + 1;
     const options = {
-      url: `http://localhost:1337/api/movie/${rand}`,
+      url: `http://54.67.99.95:1337/api/movie/${rand}`,
       method: 'get',
     };
+    console.log('Getting... ', options.url);
     axios(options)
       .then(results => {
         console.log(results);
