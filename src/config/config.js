@@ -9,6 +9,7 @@ const dev = {
 		port: parseInt(process.env.DEV_DB_PORT) || 27017,
 		name: process.env.DEV_DB_NAME || 'dev',
 	},
+	serverIp: process.env.DEV_SERVER_IP,
 };
 
 const test = {
@@ -20,6 +21,7 @@ const test = {
 		port: parseInt(process.env.TEST_DB_PORT) || 27017,
 		name: process.env.TEST_DB_NAME || 'test',
 	},
+	serverIp: process.env.TEST_SERVER_IP,
 };
 
 const prod = {

@@ -23,8 +23,10 @@ export default class App extends React.Component {
   }
   componentDidMount() {
     let rand = Math.floor(Math.random() * 5) + 1;
+    console.log(`Getting http:middle/api/movie/${rand}`);
+    // url: `middle/api/movie/${rand}`,
     const options = {
-      url: `http://54.67.99.95:1337/api/movie/${rand}`,
+      url: `/middle/api/movie/${rand}`,
       method: 'get',
     };
     console.log('Getting... ', options.url);
@@ -81,7 +83,7 @@ export default class App extends React.Component {
               questions={ this.state.currentMovie.faq } 
               movieId={ this.state.currentMovie.id }
             />
-            <Review />
+            {/* <Review /> */}
             <Footer />
           </div>
         </div> 

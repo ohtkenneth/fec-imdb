@@ -27,10 +27,14 @@ app.get('/', (req, res) => {
 
 app.get('/api/movie/:movieId', (req, res) => {
   // res.send('send back movie page');
+  console.log(req.params);
   const { movieId } = req.params;
-  
+  console.log('GOT MOVIE ID', movieId);
   models.getMovie(movieId)
-    .then(result => res.send(JSON.stringify(result)))
+    .then(result => {
+      console.log('success!');
+      res.send(JSON.stringify(result));
+    })
     .catch(err => res.send(JSON.stringify(err)));
 });
 
