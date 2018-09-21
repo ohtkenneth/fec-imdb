@@ -83,7 +83,7 @@ export default class App extends React.Component {
               questions={ this.state.currentMovie.faq } 
               movieId={ this.state.currentMovie.id }
             />
-            {/* <Review /> */}
+            <Review />
             <Footer />
           </div>
         </div> 

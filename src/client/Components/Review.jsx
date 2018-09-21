@@ -19,9 +19,9 @@ class Review extends React.Component {
     console.log('Getting /middle/api/review/1');
     axios
       .get('/middle/api/review/1')
-      .then(data => {
-        console.log("Review fetched: ", data);
-        let review = data.data;
+      .then(results => {
+        console.log("Review fetched: ", results.data);
+        let review = results.data;
         this.setState({
           review: review
         });

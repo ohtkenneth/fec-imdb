@@ -57,7 +57,7 @@ app.get('/api/review/:reviewId', (req, res) => {
 
   models.getMovieReview(reviewId)
     .then(result => {
-      res.send(JSON.stringify(result));
+      res.send(result);
     })
     .catch(err => {
       console.log(err);
