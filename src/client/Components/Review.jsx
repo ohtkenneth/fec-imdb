@@ -16,10 +16,9 @@ class Review extends React.Component {
   }
 
   fetchReview() {
-    // console.log('Getting http://172.31.5.167:5000/api/review/ ...');
-    console.log('Getting http://localhost:1337/api/review/ ...');
+    console.log('Getting /middle/api/review/1');
     axios
-      .get('http://localhost:1337/api/review/1')
+      .get('/middle/api/review/1')
       .then(data => {
         console.log("Review fetched: ", data);
         let review = data.data;
