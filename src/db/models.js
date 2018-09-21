@@ -1,12 +1,12 @@
 const db = require('./db');
 const { MovieSchema, MovieReviewSchema } = require('./Schema');
 
-const Movie = db.model('Movie', MovieSchema);
+const MovieDetail = db.model('MovieDetail', MovieSchema);
 const MovieReview = db.model('MovieReview', MovieReviewSchema);
 
 async function createMovie(movieData) {
   try {
-    const result = await Movie.create(movieData);
+    const result = await MovieDetail.create(movieData);
     return result;
   } catch(err) {
     return err;
@@ -15,7 +15,7 @@ async function createMovie(movieData) {
 
 async function deleteMovie(movieId) {
   try {
-    const result = await Movie.deleteOne({ id : movieId });
+    const result = await MovieDetail.deleteOne({ id : movieId });
     return result;
   } catch(err) {
     return err;
@@ -25,7 +25,7 @@ async function deleteMovie(movieId) {
 async function getMovie(movieId) {
   // find movie by id 
   try {
-    const result = await Movie.findOne({ id: movieId });
+    const result = await MovieDetail.findOne({ id: movieId });
     return result;
   } catch(err) {
     return err;
@@ -35,7 +35,7 @@ async function getMovie(movieId) {
 async function editMovie(movieId, section, text) {
   //
   try {
-    const result = await Movie.findOneAndUpdate({ id: movieId }, {
+    const result = await MovieDetail.findOneAndUpdate({ id: movieId }, {
       [section]: text
     }, { new: true });
     return result;
@@ -72,7 +72,7 @@ async function deleteMovieReview(reviewId) {
 }
 
 module.exports = {
-  Movie,
+  MovieDetail,
   MovieReview,
   createMovie,
   deleteMovie,

@@ -2,6 +2,7 @@ FROM mongo
 
 COPY initMovieData.json /initMovieData.json
 COPY initMovieReviewData.json /initMovieReviewData.json
+COPY initMovieSharedData.json /initMovieSharedData.json
 # CMD ./import.sh
 COPY import.sh /import.sh
 
