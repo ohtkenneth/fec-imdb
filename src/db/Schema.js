@@ -16,6 +16,7 @@ const MovieSchema = new Schema({
   taglines: String,
   genres: Array,
   movieRating: String,
+  mpaa: String,
   // DETAILS
   officialSites: Array,
   country: String,

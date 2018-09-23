@@ -5,7 +5,7 @@ import KeyWord from './KeyWord.jsx';
 import styles from './styles/Storyline.css';
 
 // storyline, plotkeywords, taglines, genres, motion picture rating, parents guide
-const Storyline = ({ storyline, plotKeyWords, taglines, genres, movieId }) => {
+const Storyline = ({ mpaa, storyline, plotKeyWords, taglines, genres, movieId }) => {
 
   // movieId, section, headerSectionId, editSectionId, editButtonId, saveButtonId
   const onEdit = () => {
@@ -49,12 +49,12 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres, movieId }) => {
       <div>
         <h4 className={ styles['keyword-heading'] }>Motion Picture Rating (MPAA)</h4>
         <p>
-          Movie rating description
+          { mpaa }
         </p>
       </div>
-      <div>
+      {/* <div>
         <h4 className={ styles['keyword-heading'] }>Parents Guide</h4>
-      </div>
+      </div> */}
     </div>
   );
 };

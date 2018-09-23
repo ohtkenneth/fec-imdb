@@ -33,6 +33,7 @@ const prod = {
 		port: parseInt(process.env.TEST_DB_PORT) || 27017,
 		name: process.env.TEST_DB_NAME || 'fMDB',
 	},
+	serverIp: process.env.PROD_SERVER_IP,
 };
 
 const config = {

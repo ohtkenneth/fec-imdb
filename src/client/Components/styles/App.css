@@ -14,10 +14,13 @@
   margin-inline-end: 0px;
 }
 
-:local(ul) {
+/* :local(ul) {
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  font-size: 13px;
   list-style: none;
   padding-left: 0px;
-}
+} */
 
 /* :local(li) {
   color: #666666;

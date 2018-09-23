@@ -19,12 +19,6 @@ app.use(logger);
 app.use(express.static(path.join(__dirname, '/../../dist')));
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-app.get('/', (req, res) => {
-  console.log(req.url);
-  // res.sendFile(path.join(__dirname, '/../client/public/index.html'));
-  res.send('Hello world');
-});
-
 app.get('/api/movie/:movieId', (req, res) => {
   // res.send('send back movie page');
   console.log(req.params);
