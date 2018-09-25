@@ -44,7 +44,7 @@ describe('db models', () => {
       .then(result => {
         expect(result.title).toBe(newMovieTitle);
         done();
-      })
+      });
   });
 
   test('Creates and retrieves a movie review with a given id', (done) => {

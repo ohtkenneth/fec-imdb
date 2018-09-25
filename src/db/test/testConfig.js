@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const { Movie, MovieReview } = require('../models');
+const { MovieDetail, MovieReview } = require('../models');
 
 module.exports = {
   mongoose,
   connect: (done) => {
-    return mongoose.connect('mongodb://localhost/fMDB')
-      .then(() => Movie.deleteMany({}))
+    return mongoose.connect('mongodb://localhost/test')
+      .then(() => MovieDetail.deleteMany({}))
       .then(() => MovieReview.deleteMany({}))
       .then(() => done());
   },

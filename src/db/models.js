@@ -51,7 +51,7 @@ async function createMovieReview(movieReviewData) {
   } catch(err) {
     return err;
   }
-};
+}
 
 async function getMovieReview(reviewId) {
   try {
