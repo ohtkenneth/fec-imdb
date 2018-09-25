@@ -38,4 +38,5 @@ describe('<App />', () => {
   //   const wrapper = shallow(<App />);
   //   console.log(wrapper.find(PhotoList));
   // });
+  console.log(process.env);
 });

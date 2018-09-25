@@ -6,7 +6,7 @@ cache:
   - node_modules
 services: mongodb
 env:
-  - NODE_ENV=DEV
+  - NODE_ENV=dev
 install:
   - npm install
 before_script:
