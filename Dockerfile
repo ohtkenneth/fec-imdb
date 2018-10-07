@@ -20,7 +20,6 @@ COPY . .
 # If you are building your code for production
 # RUN npm install --only=production
 RUN npm install --production
-
 # Build webpack bundle
 # RUN npm run build:prod
 
