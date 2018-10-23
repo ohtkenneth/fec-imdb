@@ -15,12 +15,4 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
-// mongoose.connect(`mongodb://${host}:${port}`);
-// mongoose.connect('mongodb://localhost/fMDB');
-
-// const db = mongoose.connection;
-// db.once('open', () => {
-//   console.log(`connected to mongodb instance at mongodb://${host}:${port}/${name}`);
-// });
-
 module.exports = mongoose;

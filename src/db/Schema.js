@@ -2,7 +2,6 @@ const db = require('./db');
 const Schema = db.Schema;
 
 const MovieSchema = new Schema({
-  // id: Number,
   id: {
     type: Number,
     unique: true,

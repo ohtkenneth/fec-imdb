@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import styles from "./styles/Review.css";
 
+// Servando's module
 class Review extends React.Component {
   constructor(props) {
     super(props);
@@ -16,18 +17,16 @@ class Review extends React.Component {
   }
 
   fetchReview() {
-    console.log('Getting /middle/api/review/1');
     axios
       .get('/middle/api/review/1')
       .then(results => {
-        console.log("Review fetched: ", results.data);
         let review = results.data;
         this.setState({
           review: review
         });
       })
       .catch(error => {
-        console.log("Error retrieving review: ", error);
+        console.log('Error retrieving review: ', error);
       });
   }
 

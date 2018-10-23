@@ -12,4 +12,4 @@ module.exports = {
   disconnect: (done) => {
     return mongoose.disconnect(done);
   }
-}
+};

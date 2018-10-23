@@ -4,10 +4,7 @@ import makeEditable from '../utils/editSection';
 import KeyWord from './KeyWord.jsx';
 import styles from './styles/Storyline.css';
 
-// storyline, plotkeywords, taglines, genres, motion picture rating, parents guide
 const Storyline = ({ mpaa, storyline, plotKeyWords, taglines, genres, movieId }) => {
-
-  // movieId, section, headerSectionId, editSectionId, editButtonId, saveButtonId
   const onEdit = () => {
     makeEditable(movieId, 'storyline', 'header', 'story-line-text', 'storyline-edit-button', 'storyline-save-button');
   };
@@ -52,9 +49,6 @@ const Storyline = ({ mpaa, storyline, plotKeyWords, taglines, genres, movieId })
           { mpaa }
         </p>
       </div>
-      {/* <div>
-        <h4 className={ styles['keyword-heading'] }>Parents Guide</h4>
-      </div> */}
     </div>
   );
 };

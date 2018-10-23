@@ -1,11 +1,4 @@
 :local(.container) {
-  /* width: 667px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  font-family: Arial;
-  color: #474747;
-  flex-direction: column;
-  */
   composes: section-container from './App.css';
   flex-direction: column;
   border-top: 1px solid grey;
@@ -15,7 +8,6 @@
 }
 
 :local(.reviewbody){
-  /* margin: 0px 15px 25px 15px; */
 }
 
 :local(.header) {

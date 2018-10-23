@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import PhotoList from '../PhotoList';
-import KeyWord from '../KeyWord';
 
 const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 

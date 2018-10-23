@@ -4,7 +4,6 @@ import BoxOffice from '../BoxOffice';
 const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<BoxOffice />', () => {
-  // give it some props
   const wrapper = shallow(
     <BoxOffice 
       budget={ testMovieData.budget } 

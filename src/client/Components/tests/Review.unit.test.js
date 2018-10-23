@@ -3,8 +3,6 @@ import { shallow } from 'enzyme';
 
 import Review from '../Review';
 
-const testMovieReviewData =  require('../../../db/mockdata/mockMovieReviewData.json')[0];
-
 describe('<Review />', () => {
   const wrapper = shallow(<Review />);
 

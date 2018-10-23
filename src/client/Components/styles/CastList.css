@@ -1,13 +1,10 @@
 :local(.container) {
-  /* border: 1px solid grey;
-  padding: 20px; */
   composes: section-container from './App.css';
 }
 
 :local(.cast-list-container) {
   display: flex;
   flex-direction: column;
-  /* padding: 10px 0px 0px 0px; */
 }
 
 :local(.cast-list-container div:nth-child(odd)) {

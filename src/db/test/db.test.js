@@ -1,13 +1,10 @@
-// const mongoose = require('mongoose');
 const { mongoose, connect, disconnect } = require('./testConfig.js');
 const { createMovie, deleteMovie, getMovie, editMovie, getMovieReview, createMovieReview, deleteMovieReview } = require('../models');
-const axios = require('axios');
 
 const testMovieData = require('./testMovie.json');
 const testMovieReviewData = require('./testMovieReview.json');
 
 beforeAll((done) => {
-  // return mongoose.connect('mongodb://localhost/fMDB')
   return connect(done);
 });
 
@@ -20,12 +17,10 @@ describe('db models', () => {
     return Promise.all([createMovie(testMovieData), createMovieReview(testMovieReviewData)]);
   });
   afterEach(() => {
-    // delete movie 100000
     return Promise.all([deleteMovie(testMovieData.id), deleteMovieReview(testMovieReviewData.id)]);
   });
 
   test('Creates and retrieves a movie with a given id', (done) => {
-    // dummy data
     expect.assertions(2);
     getMovie(testMovieData.id)
       .then(result => {
@@ -33,7 +28,7 @@ describe('db models', () => {
         expect(result).toBeTruthy();
         expect(result.id).toEqual(1000000);
         done();
-      })
+      });
   });
 
   test('Edits a movie with a given id (edit movie title property)', (done) => {
@@ -54,6 +49,6 @@ describe('db models', () => {
         expect(result).toBeTruthy();
         expect(result.id).toEqual(2000000);
         done();
-      })
+      });
   });
-})
+});

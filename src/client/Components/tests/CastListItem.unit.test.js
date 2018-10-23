@@ -29,7 +29,6 @@ describe('<CastListItem />', () => {
     expect(wrapper.find('.character').length).toBe(1);
   });
 
-  // elipse sepearator between actor and character names
   it('renders a .elipse', () => {
     expect(wrapper.find('.elipse').length).toBe(1);
   });

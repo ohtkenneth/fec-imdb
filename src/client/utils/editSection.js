@@ -44,17 +44,13 @@ const saveEdit = (movieId, section, headerSectionId, editSectionId, editButtonId
       section: section,
       text: editSectionText.innerHTML,
     }
-  }
+  };
   axios(options)
     .then(result => {
       // refresh page?
       // or have app request movie again
-      console.log('done')
+      console.log('done');
     });
-}
-
-const postEdit = (movieId, section, text) => {
-
-}
+};
 
 export default makeEditable;

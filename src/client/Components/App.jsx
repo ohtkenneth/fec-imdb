@@ -3,7 +3,6 @@ import PhotoList from './PhotoList.jsx';
 import CastList from './CastList.jsx';
 import Storyline from './Storyline.jsx';
 import Details from './Details.jsx';
-// import CompanyCredits from './CompanyCredits.jsx';
 import BoxOffice from './BoxOffice.jsx';
 import DidYouKnow from './DidYouKnow.jsx';
 import FAQ from './FAQ.jsx';
@@ -23,16 +22,12 @@ export default class App extends React.Component {
   }
   componentDidMount() {
     let rand = Math.floor(Math.random() * 5) + 1;
-    console.log(`Getting http:middle/api/movie/${rand}`);
-    // url: `middle/api/movie/${rand}`,
     const options = {
       url: `/middle/api/movie/${rand}`,
       method: 'get',
     };
-    console.log('Getting... ', options.url);
     axios(options)
       .then(results => {
-        console.log(results);
         this.setState({
           currentMovie: results.data,
         });

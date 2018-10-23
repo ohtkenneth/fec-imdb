@@ -15,9 +15,6 @@ module.exports = function(grunt) {
       production: {
         options: {
           bucket: 'fec-imdb',
-          // params: {
-          //   ContentEncoding: 'gzip',
-          // },
         },
         files: [
           { expand: true, cwd: 'dist', src: ['**'], dest: 'app'},

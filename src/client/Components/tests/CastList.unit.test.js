@@ -17,7 +17,7 @@ describe('<CastList />', () => {
 
   it('renders a .heading', () => {
     expect(wrapper.find('.heading').length).toBe(1);
-  })
+  });
 
   it('renders a .cast-list-container', () => {
     expect(wrapper.find('.cast-list-container').length).toBe(1);
@@ -28,7 +28,6 @@ describe('<CastList />', () => {
   });
 
   it('renders <CastLastItem/>\'s based on the given cast props', () => {
-    // given cast length is through props
     expect(wrapper.find(CastListItem).length).toBe(testMovieData.cast.length);
-  })
+  });
 });

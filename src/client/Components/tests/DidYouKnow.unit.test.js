@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import DidYouKnow from '../DidYouKnow';
-import KeyWord from '../KeyWord';
 
 const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
@@ -34,8 +33,7 @@ describe('<DidYouKnow />', () => {
     expect(wrapper.find('.keyword-heading').length).toBe(6);
   });
 
-  // count li for sountracks
   it('renders <li/> for soundtracks with the given props', () => {
     expect(wrapper.find('li').length).toBe(soundtracks.length);
   });
-});;
+});

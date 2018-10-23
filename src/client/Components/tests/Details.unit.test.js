@@ -41,6 +41,6 @@ describe('<Details />', () => {
     const lengthLanguages = languages.length;
     const lengthFilmingLocations = filmingLocations.length;
 
-    expect(wrapper.find(KeyWord).length).toBe(lengthOfficialSites + lengthLanguages + lengthFilmingLocations)
+    expect(wrapper.find(KeyWord).length).toBe(lengthOfficialSites + lengthLanguages + lengthFilmingLocations);
   });
 });
