@@ -22,7 +22,7 @@ npm run load
 ```
 npm start
 ```
-###  Open chome and enter:
+###  Open web browser and enter:
 ```
 http://localhost:1337
 ```
