@@ -20,13 +20,10 @@ app.use(express.static(path.join(__dirname, '/../../dist')));
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.get('/api/movie/:movieId', (req, res) => {
-  // res.send('send back movie page');
-  console.log(req.params);
   const { movieId } = req.params;
-  console.log('GOT MOVIE ID', movieId);
+
   models.getMovie(movieId)
     .then(result => {
-      console.log('success!');
       res.send(JSON.stringify(result));
     })
     .catch(err => res.send(JSON.stringify(err)));
@@ -54,7 +51,6 @@ app.get('/api/review/:reviewId', (req, res) => {
       res.send(result);
     })
     .catch(err => {
-      console.log(err);
       res.send(JSON.stringify(err));
     });
 });

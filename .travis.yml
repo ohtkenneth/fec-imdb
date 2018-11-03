@@ -12,5 +12,4 @@ install:
 before_script:
   - npm run build:prod
 script:
-  # - npm test
   - npm test
