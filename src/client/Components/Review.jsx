@@ -1,14 +1,16 @@
-import React from "react";
-import axios from "axios";
-import styles from "./styles/Review.css";
+import React, { Component } from 'react';
+import axios from 'axios';
+import styles from './styles/Review.css';
 
 // Servando's module
-class Review extends React.Component {
+class Review extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       review: {}
     };
+    
     this.fetchReview = this.fetchReview.bind(this);
   }
 
@@ -32,12 +34,12 @@ class Review extends React.Component {
 
   render() {
     let total = [];
-    let tinystars = number => {
+    let rating = number => {
       for(let i = 0; i < number; i++){
-        total.push(<span key={"star_"+i} className="fa fa-star" />)
+        total.push(<span key={'star_'+i} className='fa fa-star' />)
       }
     };
-    tinystars(this.state.review.review_average)
+    rating(this.state.review.review_average)
     return (
       <div className={styles.container}>
         <div className={styles.reviewbody}>
@@ -46,38 +48,38 @@ class Review extends React.Component {
             <div className={styles.starbar}>
               {total.map(star => {
                 return star;
-              })}{" "}
-              {this.state.review.review_average} / 10{" "}
+              })}{' '}
+              {this.state.review.review_average} / 10{' '}
               <strong>{this.state.review.review_title}</strong>
             </div>
             <div className={styles.userline}>
               <span className={styles.date}>
-                {this.state.review.review_date} |{" "}
+                {this.state.review.review_date} |{' '}
               </span>
-              <a className={styles.username} href="" >
-                by {this.state.review.reviewer} -{" "}
+              <a className={styles.username} href='' >
+                by {this.state.review.reviewer} -{' '}
               </a>
-              <a className={styles.userreviews} href="" >See all my reviews</a>
+              <a className={styles.userreviews} href='' >See all my reviews</a>
             </div>
             <div className={styles.reviewtext}>
               <p>{this.state.review.review}</p>
             </div>
           </div>
           <div className={styles.feedback}>
-            {this.state.review.reviews_number} of{" "}
+            {this.state.review.reviews_number} of{' '}
             {this.state.review.review_viewers} people found this review helpful.
-            Was this review helpful to you?{" "}
-            <button className={styles.btnyes} value="yes">
+            Was this review helpful to you?{' '}
+            <button className={styles.btnyes} value='yes'>
               Yes
-            </button>{" "}
-            <button className={styles.btnno} value="no">
+            </button>{' '}
+            <button className={styles.btnno} value='no'>
               No
             </button>
-            {" | "}
-            <a className={styles.report} href="" >Report this</a>
+            {' | '}
+            <a className={styles.report} href='' >Report this</a>
           </div>
-          <a className={styles.reviewthis} href="" >Review this title | </a>
-          <a className={styles.seeall} href="" >
+          <a className={styles.reviewthis} href='' >Review this title | </a>
+          <a className={styles.seeall} href='' >
             See all {this.state.review.review_count} user reviews
           </a>
         </div>

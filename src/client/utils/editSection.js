@@ -11,6 +11,7 @@ const makeEditable = (movieId, section, headerSectionId, editSectionId, editButt
   // add button to save changes
   editSectionText.contentEditable = true;
   const saveButton = document.createElement('button');
+  
   saveButton.innerHTML = 'Save Changes';
   saveButton.id = saveButtonId;
   saveButton.addEventListener('click', () => {
